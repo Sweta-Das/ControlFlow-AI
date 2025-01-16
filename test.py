@@ -1,4 +1,4 @@
-from prefect import flow
+from prefect import flow # type: ignore
 
 
 @flow(log_prints=True)
