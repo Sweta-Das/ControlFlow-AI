@@ -1,0 +1,4 @@
+controlflow==0.11.4
+python-dotenv==1.0.1
+langchain-openai==0.3.3
+langchain-anthropic==0.3.5
