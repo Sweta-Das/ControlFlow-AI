@@ -1,0 +1,9 @@
+[project]
+name = "agentic-ais"
+version = "0.1.0"
+description = "Study of Agentic AI frameworks and tools."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic-ai[logfire]>=0.4.2",
+]

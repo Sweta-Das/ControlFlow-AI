@@ -1,64 +1,25 @@
-# 🧠 Agentic AI Study
+# 🧩 Pydantic AI — Agent Framework with Pydantic
 
-Welcome to **Agentic-AIs-Study** — a personal learning repository exploring modern *agentic AI* tools and frameworks. This repo is organized to stay clean and modular: the `main` branch provides a high-level overview, while tool-specific deep dives are separated into dedicated branches.
-
----
-
-## 📌 What is Agentic AI?
-
-**Agentic AI** refers to AI systems that operate as *autonomous agents*. These agents can:
-
-- Perceive goals
-- Reason about steps
-- Interact with tools or APIs
-- Adapt based on outcomes
-- Collaborate with other agents
-
-Agentic systems go beyond simple prompting by enabling **goal-driven behaviors**, **memory**, and **tool use**.
+[Pydantic AI](https://ai.pydantic.dev/) is a **Python-first agent framework** built by the Pydantic team. It uses Pydantic models to bring **type safety**, **structured responses**, and **smooth integration** with LLMs into your agent workflows.
 
 ---
 
-## 🧰 Tools Explored
+## 🚀 Why Use Pydantic AI
 
-| Tool Name      | Short Description                                                    | Branch         |
-|----------------|----------------------------------------------------------------------|----------------|
-| `controlflow-ai`  | Structured agent framework focused on readability and simplicity.     | [`controlflow-ai`](https://github.com/Sweta-Das/Agentic-AIs-Study/tree/controlflow) |
-| `pydantic-ai`  | Combines Pydantic's validation with LLM outputs for smart workflows. | [`pydantic-ai`](https://github.com/Sweta-Das/Agentic-AIs-Study/tree/pydantic-ai) |
-| `crewAI`       | Multi-agent task orchestration framework.                            | [`crewAI`](https://github.com/Sweta-Das/Agentic-AIs-Study/tree/crewAI) |
-| `langgraph`    | Graph-based agent flows built on top of LangChain.                   | [`langgraph`](https://github.com/Sweta-Das/Agentic-AIs-Study/tree/langgraph) |
-| `autogen`      | Microsoft’s framework for goal-driven, multi-agent solutions.         | [`autogen`](https://github.com/Sweta-Das/Agentic-AIs-Study/tree/autogen) |
-
+- **Built by the Pydantic team** — designed for production-grade GenAI apps  
+- **Model-agnostic** — supports OpenAI, Anthropic, Gemini, Groq, Cohere, Mistral, and more 
+- **Type-safe & structured** — outputs validated and enforced via Pydantic schemas 
+- **Tool integration** — supports function tools and dependency injection for dynamic behavior 
+- **Streamed & instrumented** — live output streaming and optional Logfire telemetry 
 
 ---
 
-## 🗂 Repo Structure
+## ⚙️ Installation
 
-Each tool has its **own branch**, containing:
-
-- ✅ Setup & installation
-- 💡 Key concepts and architecture
-- 🧪 Example code and experiments
-- 📝 Notes and learnings
-
----
-
-## 🎯 Project Goals
-
-- Build an organized knowledge base around agentic AI.
-- Understand the strengths and use cases of different tools.
-- Create example agents and workflows.
-- Track personal learning and experiments.
-
----
-
-## 🚀 Getting Started
-
-To explore a specific tool:
+Requires **Python 3.9+**:
 
 ```bash
-# Clone the repo
-git clone https://github.com/Sweta-Das/Agentic-AIs-Study.git
-cd Agentic-AIs-Study
-
-# Switch to a specific tool branch
-git checkout controlflow-ai
+pip install pydantic-ai
+# Optional tool support:
+pip install "pydantic-ai[logfire]"        # For telemetry
+pip install "pydantic-ai[examples]"       # To run built-in examples
