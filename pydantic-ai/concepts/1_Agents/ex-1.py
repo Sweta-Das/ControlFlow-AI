@@ -1,0 +1,39 @@
+# roulette_wheel.py
+
+from pydantic_ai import Agent, RunContext
+from dotenv import load_dotenv, find_dotenv
+
+# Load env vars
+load_dotenv(find_dotenv())
+
+# Instantiate an agent
+roulette_agent = Agent(  
+    model='openai:gpt-4o-mini',
+    deps_type=int,
+    output_type=bool,
+    system_prompt=(
+        'Use the `roulette_wheel` function to see if the '
+        'customer has won based on the number they provide.'
+    ),
+)
+
+
+@roulette_agent.tool
+async def roulette_wheel(ctx: RunContext[int], square: int) -> str:  
+    """check if the square is a winner"""
+    return 'winner' if square == ctx.deps else 'loser'
+
+
+# Run the agent
+success_number = 18  
+result = roulette_agent.run_sync('Put my money on square eighteen', deps=success_number)
+print(result.output)  # True
+
+
+result = roulette_agent.run_sync('I bet five is the winner', deps=success_number)
+print(result.output) # False
+
+
+"""
+In the above code `success_number` is 18. So, when square said it in the 1st agent, it won, while the other one lost.
+"""
